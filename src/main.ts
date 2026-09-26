@@ -5,6 +5,10 @@ async function bootstrap() {
   const server = await createServer();
   const port = Number(process.env.PORT) || 3011;
   await server.listen({ port, host: '0.0.0.0' });
+
+  const baseUrl = `http://localhost:${port}`;
+  server.log.info(`Hinário IBBF API rodando em ${baseUrl}`);
+  server.log.info(`Swagger UI disponível em ${baseUrl}/docs`);
 }
 
 bootstrap().catch((error: unknown) => {
