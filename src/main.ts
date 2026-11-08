@@ -7,8 +7,8 @@ async function bootstrap() {
   await server.listen({ port, host: '0.0.0.0' });
 
   const baseUrl = `http://localhost:${port}`;
-  server.log.info(`Hinário IBBF API rodando em ${baseUrl}`);
-  server.log.info(`Swagger UI disponível em ${baseUrl}/docs`);
+  server.log.info(`🎵 Hinário IBBF API rodando em ${baseUrl}`);
+  server.log.info(`📖 Swagger UI disponível em ${baseUrl}/docs`);
 }
 
 bootstrap().catch((error: unknown) => {
